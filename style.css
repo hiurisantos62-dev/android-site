@@ -1,7 +1,13 @@
 @charset "UTF-8";
+
+*{
+    margin:0;
+    padding:0;
+}
 @font-face {
     font-family:'idroid' ;
     src: url('fontes/idroid.otf') format('opentype');
+
 }
 body{
     margin:auto;
@@ -11,39 +17,47 @@ body{
 
 .topo{
     background-image:linear-gradient(#5DCC8E,#348758,#246340);
+    min-width: 330px;
 }
 
 header{
     background-image:linear-gradient(transparent);
-    padding: 10px 10px 20px 10px;
+    padding: 20px 10px 0px 10px;
     color:white;
     text-align:center;
+    min-height: 150px;
+    
 }
-header >h3{
-    font-size:1.2em;
-    margin-top:0px;
+header >h2{
+    margin:auto;
+    max-width: 500px;
+    font-size:1.5em;
     font-weight: lighter;
-    text-shadow: #071c10 1px 3px 10px;
-
+    text-shadow: #071c10af 1px 3px 10px;
+    padding-bottom: 20px;
 }
 header >h1{
     font-weight:normal;
-    font-size: 1.8em;
+    font-size: 2em;
     text-shadow: #071c1098 2px 3px 12px;
-
+    padding-bottom: 10px;
+    padding-top: 20px;
 }
 
 nav{
     background-image:linear-gradient(transparent);
-    display:flex;
-    gap: 8px;
-    padding:10px 15px;
+    display:block;
+    max-width: 150px;
+    padding:10px 10px 3px 10px;
+    line-height:1.9em;
+    
 }
 nav > a{
     color:white;
     text-decoration:none;
     padding:08px 12px;
-    text-shadow: #071c10 1px 2px 10px;
+    text-shadow: #071c10c8 1px 2px 10px; 
+    font-size:1.2em;
 }
 nav :hover{
     background-color: #246340;
@@ -62,10 +76,13 @@ a.destaque:hover{
 main{
     margin:auto;
     background-color:#ffffff;
+    min-width: 300px;
     max-width: 900px;
     padding:15px;
-    text-indent:20px;
-    
+    text-indent:30px;
+    box-shadow: 0px 0px 15px #071c1098;
+    margin-bottom: 20px;
+    border-radius: 0px 0px 10px 10px;
 }
 main article > h2{
     color:#1F603D;
@@ -73,6 +90,12 @@ main article > h2{
 }
 main article > p{
     text-align: justify;
+    line-height:1.5em;
+    padding: 15px;
+}
+figure > figcaption{
+    text-align: center;
+    padding: 10px;
     
 }
 .especial{
@@ -93,14 +116,21 @@ main article > p{
 }
 .video iframe{
     position: absolute;
-    top: 12px;
-    left: 2.5%;
-    width: 95%;
-    height: 95%;
+    top: 4%;
+    left: 4.9%;
+    width: 90%;
+    height: 90%;
 }
-.img-justify {
-    display:flex;
-    justify-content: center;
+.img-alteracao > img{
+    width:100%;
+    display:block;
+    margin:auto;
+}
+.img-justify{
+    max-width: 350px;
+    display:block;
+    margin:auto
+
 }
 
 section{
@@ -113,23 +143,31 @@ aside{
 }
 aside > h2{
     background-color: #2FA866;
-    margin: 15px 0px 0px 0px;
     padding:5px;
     border-radius:10px 10px 0px 0px;
 }
+aside .tabela > p{
+   padding: 10px;
+    line-height:1.4em;
+}
 .tabela{
     background-color:#C5EBD6;
-    padding:15px;
-
+    padding:10px 10px 10px 10px;
+    text-align: justify;
 }
-.lista-android{
+aside .lista-android{
     font-weight: bold;
     list-style: '🤖  ';
-    columns:2;
+    columns: 2;
     list-style-position: inside;
-    padding-left:0px;
+    padding-left:5px;
     text-decoration:none;
-    color: #071c10;
+    color: #071c10;  
+}
+aside .lista-android > li{
+    padding:5px 0px;
+    min-width: 533px;
+    
     
 }
 li:hover{
@@ -147,9 +185,8 @@ footer{
     text-align:center;
 }
 
-footer > p{
-    margin:0;
-}
 .conclusao{
     padding: 15px;
+    text-align: justify;
+    line-height:1.4em;
 }
